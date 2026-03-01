@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENG / YOUSSEF SOBHY | C++ Showcase</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Prism VS Code Theme -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-vsc-dark-plus.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #16213e);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            padding: 30px 20px;
+            text-align: center;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 15px;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+            background: rgba(20, 20, 35, 0.85);
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            padding: 35px;
+            position: relative;
+        }
+
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .code-title {
+            font-weight: 600;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        button {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: #000;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,242,254,0.4);
+        }
+
+        pre {
+            border-radius: 18px;
+            font-size: 15px;
+            padding: 20px !important;
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>C++ Project Showcase</h1>
+    <p>Designed & Developed by ENG / YOUSSEF SOBHY</p>
+</header>
+
+<div class="container">
+
+    <div class="code-header">
+        <div class="code-title">calculator.cpp</div>
+        <button onclick="copyCode()">Copy Code</button>
+    </div>
+
+    <pre class="line-numbers"><code id="cppCode" class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main(void){
+
+    int num1;
+    int num2;
+    
+    cout &lt;&lt; "Enter Number 1 : "; cin &gt;&gt; num1;
+    cout &lt;&lt; "Enter Number 2 : "; cin &gt;&gt; num2;
+
+    cout &lt;&lt; "Number 1 + Number 2 = " &lt;&lt; num1 + num2 &lt;&lt; endl;
+    cout &lt;&lt; "Number 1 * Number 2 = " &lt;&lt; num1 * num2 &lt;&lt; endl;
+    cout &lt;&lt; "Number 1 / Number 2 = " &lt;&lt; num1 / num2 &lt;&lt; endl;
+    cout &lt;&lt; "Number 1 - Number 2 = " &lt;&lt; num1 - num2 &lt;&lt; endl;
+
+    return 0;
+
+}
+    </code></pre>
+</div>
+
+<footer>
+© 2026 Youssef Sobhy | Computers and Artificial Intelligence Student
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+<script>
+function copyCode() {
+    const code = document.getElementById("cppCode").innerText;
+    navigator.clipboard.writeText(code);
+
+    const btn = event.target;
+    btn.innerText = "Copied!";
+    setTimeout(() => {
+        btn.innerText = "Copy Code";
+    }, 1500);
+}
+</script>
+
+</body>
+</html>
